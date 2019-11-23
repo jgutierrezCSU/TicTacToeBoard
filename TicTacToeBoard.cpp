@@ -75,8 +75,14 @@ Piece TicTacToeBoard::placePiece(int row, int column)
 **/
 Piece TicTacToeBoard::getPiece(int row, int column)
 {
-	
-  return Invalid;
+	//int limit =3;
+  if(row >= BOARDSIZE || column >= BOARDSIZE || row < 0 || column < 0)
+  {
+    return Invalid;
+  }
+  return board[row][column];
+
+//  return Invalid;
 }
 
 /**
@@ -85,6 +91,41 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
+	//return Invalid
+	for(int i = 0; i < BOARDSIZE; i++){
+    if((board[i][0] != Blank) && (board[i][0] == board[i][1]) && (board[i][1] == board[i][2]))
+    {
+      return board[i][0];
+    }
+  }
+
+  for(int i = 0; i < BOARDSIZE; i++){
+    if((board[0][i] != Blank) && (board[0][i] == board[1][i]) && (board[1][i] == board[2][i]))
+    {
+      return board[0][i];
+    }
+  }
+
+  if((board[1][1] != Blank) && (board[0][0] == board[1][1] == board[2][2]))
+  {
+    return board[1][1];
+  }else
+  
+  if((board[1][1] != Blank) && (board[2][0] == board[1][1] == board[0][2]))
+  {
+    return board[1][1];
+  }
+  //Blank if the board is filled and no one has won.
+ for(int i = 0; i < 3; i++){
+		for(int j = 0; j < 3; j++){
+			
+			if(board[i][j] == Blank)
+			{
+				return Blank;
+			}
+		}
+	}	
 	
-  return Invalid;
+	return Invalid;
+
 }
