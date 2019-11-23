@@ -29,10 +29,10 @@ TEST(TicTacToeBoardTest, unitTestName)
 TEST(TicTacToeBoardTest, toggleOnce)
 {
 	TicTacToeBoard board;
-	ASSERT_EQ(board.toggleTurn(), 1);
+	ASSERT_EQ(board.toggleTurn(), O);
 }
 TEST(TicTacToeBoardTest, toggleTwice)
 {
 	TicTacToeBoard board;
-	ASSERT_EQ(board.toggleTurn(), 1);
+	ASSERT_EQ(board.toggleTurn(), X);
 }
