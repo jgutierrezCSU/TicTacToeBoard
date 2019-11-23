@@ -19,7 +19,16 @@ TicTacToeBoard::TicTacToeBoard()
 **/
 Piece TicTacToeBoard::toggleTurn()
 {
-  return Invalid;
+	if (turn == X) 
+	{
+       turn = O;
+  	} 
+  	else if (turn == O) 
+  	{
+    	turn = X;
+  	}
+     return turn;
+  //return Invalid;
 }
 
 /**
@@ -33,6 +42,7 @@ Piece TicTacToeBoard::toggleTurn()
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
+	
   return Invalid;
 }
 
@@ -42,6 +52,7 @@ Piece TicTacToeBoard::placePiece(int row, int column)
 **/
 Piece TicTacToeBoard::getPiece(int row, int column)
 {
+	
   return Invalid;
 }
 
@@ -51,5 +62,6 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
+	
   return Invalid;
 }
