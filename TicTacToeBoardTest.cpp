@@ -18,10 +18,27 @@ TEST(TicTacToeBoardTest, Oalternate){
   board.toggleTurn();
   ASSERT_EQ(board.toggleTurn(), X);
 }
-TEST(TicTacToeBoardTest, Xalternate){
-  TicTacToeBoard board;
-  board.toggleTurn();
-  ASSERT_EQ(board.toggleTurn(), Invalid);
+
+TEST(TicTacToeBoard, getXdiagWin){
+	TicTacToeBoard board;
+	board.placePiece(1,1);
+	board.placePiece(1,0);
+	board.placePiece(0,0);
+	board.placePiece(2,1);
+	board.placePiece(2,2);
+	ASSERT_EQ(tic.getWinner(), O);
+}
+
+//unit tests for get winner diagonal
+TEST(TicTacToeBoard, getODiagWin){
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	board.placePiece(1,1);
+	board.placePiece(0,2);
+	board.placePiece(2,1);
+	board.placePiece(2,0);
+	ASSERT_EQ(tic.getWinner(), O);
 }
 
 TEST(TicTacToeBoard, willplayerchange){
