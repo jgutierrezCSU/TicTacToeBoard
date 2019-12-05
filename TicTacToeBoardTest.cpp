@@ -19,33 +19,6 @@ TEST(TicTacToeBoardTest, Oalternate){
   ASSERT_EQ(board.toggleTurn(), X);
 }
 
-TEST(TicTacToeBoard, getXdiagWin){
-	TicTacToeBoard board;
-	board.placePiece(0,0);
-	board.placePiece(1,0);
-	board.placePiece(1,1);
-	
-	board.placePiece(2,1);
-	board.placePiece(2,2);
-	ASSERT_EQ(board.getWinner(), O);
-}
-
-//unit tests for get winner diagonal
-TEST(TicTacToeBoard, getODiagWin){
-	TicTacToeBoard board;
-	board.placePiece(0,0);
-	board.placePiece(0,2);
-	
-	board.placePiece(1,0);
-	board.placePiece(1,1);
-	
-	board.placePiece(2,1);
-	board.placePiece(2,0);
-	
-	
-	ASSERT_EQ(board.getWinner(), O);
-}
-
 TEST(TicTacToeBoard, willplayerchange){
 	TicTacToeBoard board;
 	ASSERT_EQ(board.toggleTurn(),O);
@@ -111,3 +84,30 @@ TEST(TicTacToeBoardTest, callWinnerUnfinished)
 	Piece test = Blank;
 	ASSERT_EQ(returned, test);
 }
+
+TEST(TicTacToeBoard, winnerO){
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(0,1);
+	
+	board.placePiece(1,2);
+	board.placePiece(1,1);
+	board.placePiece(2,0);
+	board.placePiece(2,1);
+	ASSERT_EQ(board.getWinner(), O);
+}
+
+
+TEST(TicTacToeBoard, winnerX){
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(0,1);
+	board.placePiece(2,0);
+	board.placePiece(0,2);
+	ASSERT_EQ(tic.getWinner(), X);
+}
+
+
+
