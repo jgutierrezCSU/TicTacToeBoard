@@ -18,6 +18,11 @@ TEST(TicTacToeBoardTest, Oalternate){
   board.toggleTurn();
   ASSERT_EQ(board.toggleTurn(), X);
 }
+TEST(TicTacToeBoardTest, Xalternate){
+  TicTacToeBoard board;
+  board.toggleTurn();
+  ASSERT_EQ(board.toggleTurn(), O);
+}
 
 TEST(TicTacToeBoard, willplayerchange){
 	TicTacToeBoard tic;
