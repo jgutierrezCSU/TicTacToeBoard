@@ -90,9 +90,9 @@ TEST(TicTacToeBoardTest, PieceIsBlank){
         Piece result = board.getPiece(2,2);
         ASSERT_EQ(result, Blank);
 }
-TEST(TicTacToeBoard, PieceIsOutofBoundsPos){
+TEST(TicTacToeBoard, PieceIsOutofBoundsNegPos){
 	TicTacToeBoard board;
-	ASSERT_EQ(board.placePiece(-5,-5), Invalid);
+	ASSERT_EQ(board.placePiece(-5,2), Invalid);
 }
 
 
