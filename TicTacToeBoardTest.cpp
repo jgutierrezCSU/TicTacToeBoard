@@ -87,9 +87,10 @@ TEST(TicTacToeBoardTest, callWinnerUnfinished)
 
 TEST(TicTacToeBoardTest, PieceIsBlank){
         TicTacToeBoard board;
-        Piece result = .board(2,2);
+        Piece result = board.getPiece(2,2);
         ASSERT_EQ(result, Blank);
 }
+
 
 
 
