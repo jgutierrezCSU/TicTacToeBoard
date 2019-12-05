@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/jgutierrezCSU/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/jgutierrezCSU/TicTacToeBoard?branch=master)
+
 # TicTacToeBoard
 
 ## Associated Enumerated Types
@@ -48,4 +50,4 @@ ___
 is not over, or Blank if the board is filled and no one has won.*
 
 
-[![Coverage Status](https://coveralls.io/repos/github/jgutierrezCSU/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/jgutierrezCSU/TicTacToeBoard?branch=master)
+
