@@ -21,7 +21,7 @@ TEST(TicTacToeBoardTest, Oalternate){
 TEST(TicTacToeBoardTest, Xalternate){
   TicTacToeBoard board;
   board.toggleTurn();
-  ASSERT_EQ(board.toggleTurn(), O);
+  ASSERT_EQ(board.toggleTurn(), Invalid);
 }
 
 TEST(TicTacToeBoard, willplayerchange){
