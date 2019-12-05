@@ -21,9 +21,10 @@ TEST(TicTacToeBoardTest, Oalternate){
 
 TEST(TicTacToeBoard, getXdiagWin){
 	TicTacToeBoard board;
-	board.placePiece(1,1);
-	board.placePiece(1,0);
 	board.placePiece(0,0);
+	board.placePiece(1,0);
+	board.placePiece(1,1);
+	
 	board.placePiece(2,1);
 	board.placePiece(2,2);
 	ASSERT_EQ(board.getWinner(), O);
@@ -33,11 +34,15 @@ TEST(TicTacToeBoard, getXdiagWin){
 TEST(TicTacToeBoard, getODiagWin){
 	TicTacToeBoard board;
 	board.placePiece(0,0);
+	board.placePiece(0,2);
+	
 	board.placePiece(1,0);
 	board.placePiece(1,1);
-	board.placePiece(0,2);
+	
 	board.placePiece(2,1);
 	board.placePiece(2,0);
+	
+	
 	ASSERT_EQ(board.getWinner(), O);
 }
 
