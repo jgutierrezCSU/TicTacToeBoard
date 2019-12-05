@@ -1,5 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jgutierrezCSU/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/jgutierrezCSU/TicTacToeBoard?branch=master)
 
+[![Build Status](https://travis-ci.org/jgutierrezCSU/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/jgutierrezCSU/TicTacToeBoard)
+
 # TicTacToeBoard
 
 ## Associated Enumerated Types
